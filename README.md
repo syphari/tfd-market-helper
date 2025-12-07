@@ -177,7 +177,7 @@ I hope this tool is helpful for the community!
 ---
 
 ## 📜 License
-MIT License — free to modify and distribute.
+MIT License = free to modify and distribute.
 
 ---
 
