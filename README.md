@@ -3,6 +3,11 @@ A modern, stylized enhancement for **The First Descendant** Trade Market, built 
 
 This extension captures all market results automatically, parses them, and displays them in a **fast**, **readable**, **interactive**, and **beautifully modern UI**.
 
+<img width="1080" height="536" alt="image" src="https://github.com/user-attachments/assets/f2f753e1-71d8-4bb0-9f22-c870a4ad4f11" />
+
+<img width="1080" height="536" alt="image" src="https://github.com/user-attachments/assets/6b1860fd-0cc4-4642-98d0-0bc28a306297" />
+
+
 ---
 
 ## ✨ Why This Was Made
