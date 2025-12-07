@@ -143,7 +143,8 @@ You now get:
 - Real-time filtering  
 
 - Note: For trigger modules please only filter for one specific module at a time and not an unfiltered list of different modules
-- For example - just all "Power Beyond" and not the mixed list of power beyond with kuiper hollow points for example this is due to how it dynamically allocates the min/max filter for trigger modules -ancestor modules can be mixed so its fine for the ancestor module mode just not trigger modules 
+- For example - just all "Power Beyond" and not the mixed list of power beyond with kuiper hollow points for example this is due to how it dynamically allocates the min/max filter for trigger modules 
+- Ancestor modules however can be mixed so its fine for the ancestor module mode just not trigger modules 
 
 
 ---
