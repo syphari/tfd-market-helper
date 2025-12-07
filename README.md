@@ -78,7 +78,7 @@ Clone or download the ZIP from GitHub:
 git clone https://github.com/syphari/tfd-market-helper.git
 ```
 
-Or download ZIP → Extract.
+Or download ZIP from "Releases" here on Github → Extract folder on PC locally.
 
 ### 2️⃣ Enable Developer Mode
 Open Chrome  
