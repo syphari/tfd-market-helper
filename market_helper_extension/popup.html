@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Market Helper</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+  body {
+      margin: 0;
+      padding: 16px;
+      /* Provide a larger minimum width so text can wrap comfortably in the popup */
+      min-width: 280px;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+      color: #e7eaf1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Confirmation container styles */
+    #confirm-container {
+      margin-top: 12px;
+      width: 100%;
+    }
+    #confirm-container.hidden {
+      display: none;
+    }
+    .confirm-box {
+      background: rgba(10, 20, 40, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+      box-sizing: border-box;
+      color: #e7eaf1;
+      font-size: 12px;
+      line-height: 1.5;
+      max-width: 360px;
+    }
+    .confirm-message {
+      margin: 0 0 12px;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .confirm-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .confirm-btn {
+      flex: 1;
+      padding: 6px 0;
+      border-radius: 18px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .confirm-btn.proceed {
+      border: none;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(110, 142, 251, 0.5);
+    }
+    .confirm-btn.proceed:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(110, 142, 251, 0.7);
+    }
+    .confirm-btn.cancel {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: transparent;
+      color: #e7eaf1;
+    }
+    .confirm-btn.cancel:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    /* Loading container styles */
+    #loading-container {
+      margin-top: 12px;
+      width: 100%;
+    }
+    #loading-container.hidden {
+      display: none;
+    }
+    .loading-box {
+      background: rgba(10, 20, 40, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+      max-width: 360px;
+      color: #e7eaf1;
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: center;
+    }
+    .loading-message {
+      margin: 0 0 12px;
+    }
+    .spinner {
+      width: 24px;
+      height: 24px;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      border-top-color: #6e8efb;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    #open-helper {
+      width: 100%;
+      padding: 12px 0;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(110, 142, 251, 0.4);
+    }
+    #open-helper:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(110, 142, 251, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <button id="open-helper">Open in Market Helper</button>
+  <!-- Confirmation container (inline, not overlay) -->
+  <div id="confirm-container" class="hidden">
+    <div class="confirm-box">
+      <p class="confirm-message">
+        Please ensure you’ve searched for your module and set the official filters. Market Helper will auto‑scroll to capture all results before loading them. Continue?
+      </p>
+      <div class="confirm-buttons">
+        <button id="confirm-proceed" class="confirm-btn proceed">I have set my filters</button>
+        <button id="confirm-cancel" class="confirm-btn cancel">I need to adjust my filters</button>
+      </div>
+    </div>
+  </div>
+  <!-- Loading container displayed while the page auto‑scrolls and captures results -->
+  <div id="loading-container" class="hidden">
+    <div class="loading-box">
+      <p class="loading-message">Capturing results… Please wait.</p>
+      <div class="spinner"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
