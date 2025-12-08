@@ -1,4 +1,4 @@
-# 🔍 TFD Trade Market Helper — Chrome & Firefox Extension
+# 🔍 TFD Trade Market Helper - Chrome & Firefox Extension
 A modern, stylized enhancement for **The First Descendant** Trade Market, built to fix the limitations of the official site and give players powerful filtering, sorting, and analysis tools.
 
 This extension captures all market results automatically, parses them, and displays them in a **fast**, **readable**, **interactive**, and **modern UI**.
