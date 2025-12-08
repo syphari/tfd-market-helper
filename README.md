@@ -78,7 +78,7 @@ This extension fixes all of that and more.
 
 ---
 
-## 🧩 Installation (Developer Mode)
+## 🧩 Installation (Chrome Developer Mode)
 This extension is not distributed via the Chrome Web Store yet. To install:
 
 ### 1️⃣ Download the Repository
@@ -106,6 +106,71 @@ Click **Load unpacked**, then select the folder containing:
 - `(icons)`
 
 Chrome will load the extension immediately.
+
+---
+
+## 🦊 Installation (Firefox)
+
+There are two ways to use this in Firefox:
+
+- **Normal Firefox** → temporary install for testing  
+- **Firefox Developer Edition / Nightly** → permanent install via `.xpi`
+
+---
+
+### 1️⃣ Normal Firefox – Temporary Install (Firefox will delete it once you close the browser)
+
+This method works in standard Firefox, but the extension will **disappear when you close Firefox**. Good for quick one off use.
+
+#### 1. Download the Firefox Build
+
+Download the **Firefox ZIP** from the GitHub Releases page and extract it locally.  
+You should have a folder containing:
+
+- `manifest.json`  
+- `popup.html`  
+- `popup.js`  
+- `helper.js`  
+- `market_helper.html`  
+- `icons/`
+
+#### 2. Load as a Temporary Add-on
+
+1. Open Firefox  
+2. Go to: `about:debugging#/runtime/this-firefox`  
+3. Click **"Load Temporary Add-on…"**  
+4. In the file picker, select **any file inside the extracted folder**  
+   (commonly `manifest.json`)
+
+Firefox will load the extension for the current session.  
+Once you close Firefox, you’ll need to reload it via `about:debugging` again.
+
+---
+
+### 2️⃣ Firefox Developer Edition / Nightly – Permanent Install via `.xpi`
+
+If you want the extension to **stay installed** and you’re okay using Firefox Developer Edition or Nightly, you can install the provided `.xpi` file.
+
+> ⚠️ This assumes you’re using **Developer Edition or Nightly**, where unsigned extensions can be allowed. Normal Firefox Release requires signed add-ons.
+
+#### 1. Download the XPI
+
+From the GitHub Releases page, download the **Firefox `.xpi`** file (e.g., `tfd-market-helper-firefox.xpi`).
+
+#### 2. (If Needed) Allow Unsigned Add-ons
+
+1. In Firefox Dev / Nightly, open: `about:config`  
+2. Search for: `xpinstall.signatures.required`  
+3. Set it to **false**
+
+#### 3. Install the XPI
+
+1. Open: `about:addons`  
+2. Either:
+   - Drag & drop the `.xpi` file into the window, **or**
+   - Click the **gear icon (⚙)** → **Install Add-on From File…** → select the `.xpi`
+
+The extension will now appear in your **Extensions** list and **persist after restart**.
 
 ---
 
